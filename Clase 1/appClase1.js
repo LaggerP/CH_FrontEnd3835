@@ -95,7 +95,7 @@ console.log(double([1,2,3]));
 //filter
 const myArray =[1,2,3,4,5,6,7,8,9];
 
-console.log(myArray.filter((element) => element % 2 ===0));
+console.log(myArray.filter((element) => element % 2 === 0));
 
 //find 
 const users = [{

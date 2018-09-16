@@ -105,9 +105,27 @@ const posts = [{
     }
 ]
 
+const result = posts.reduce((acc, post) => {
+    const postActual = acc[post.userId] ? acc[post.userId]: [];
+    postActual.push(post);
 
-const author = posts.reduce((acc, user) => {
-    return `${acc}${user.username}`;
-}, '');
+    return { ...acc, [post.userId]: postActual };
+}, {});
 
-console.log(author);
+
+
+//forma impura 
+// const result = posts.reduce( (acc, post) => {
+//     if(acc){
+//         if (acc[post.userId]) {
+//             acc[post.userId].push(post);
+//         } else {
+//             acc[post.userId] = [post];
+//         }
+//         return acc;
+//     }else{
+//         return {};
+//     }
+// }, {})
+
+console.log(result);

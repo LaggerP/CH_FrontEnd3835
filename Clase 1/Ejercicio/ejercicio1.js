@@ -10,9 +10,9 @@ const User = (_userId, _username, _name) => {
 
     const getPosts = () => post;
     const addPosts = (newPost) => post.push(newPost); 
+    const getUserAndPost = () => `${username} (${post.length})`;
     // const getNombres = () => username;
     // const getLenghtPosts = () => post.length;
-    const getUserAndPost = () => `${username} (${post.length})`;
 
     return {
         getPosts,
@@ -20,7 +20,6 @@ const User = (_userId, _username, _name) => {
         getUserAndPost
     };
 };
-
 
 const myUser =  User(1, "LaggerP", "Pablo");
 myUser.addPosts('mi primer post');
