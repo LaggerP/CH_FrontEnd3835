@@ -1,0 +1,9 @@
+.par{
+    color: red;
+    background-color: rgb(210, 131, 131);
+}
+
+.impar{
+    background-color: rgb(8, 250, 117);
+    color:green;
+}

@@ -21,12 +21,27 @@ someAsyncFn()
 
     }) //promesa rechazada - recibe el error 
 
-    //como funciona una promesa por dentro
-const promisefiedNewFn = (data) =>{
-    return new Promise((resolve, reject) => {
-        oldAsync
-    })
+    
+let b = async function () {
+    return 'hola'
 }
+
+b().then(function (data) {
+    console.log(data)
+}, function (data) {
+    console.log(data)
+})
+
+    //como funciona una promesa por dentro
+    
+const promisifiedNewFn = (data) => {
+    return new Promise((resolve, reject) => {
+        oldAsyncFn(data, (err, data) => {
+            if (err) reject(err);
+            resolve(data);
+        });
+    });
+};
 
 ////////////////////////////////////
 
