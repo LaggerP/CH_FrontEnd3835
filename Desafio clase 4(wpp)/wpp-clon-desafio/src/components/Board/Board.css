@@ -1,0 +1,56 @@
+/*Board styles*/
+
+
+.Board-container{
+    margin-left: 10px;
+    width: 100%;
+    height: 700px;
+    background: rgb(239, 218, 135);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/*Messages styles*/
+
+.Messages-container{
+    width: 100%;
+    height: 615px;
+    background-image: url(./wppfondo.png);
+    overflow-y: scroll;
+}
+
+
+.Messages-container-messages{
+    font-size: 15px;
+    width: 100%;
+    height: 615px;
+}
+
+.Messages-container-message{
+    font-size: 13px;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+
+    
+}
+
+.messageSender{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius:59px 59px 0px 59px;
+    padding: 10px;
+
+}
+
+.messageReceiver{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius:0 59px 59px 59px;
+    margin: 10px;
+}
+
+/*Form styles*/
