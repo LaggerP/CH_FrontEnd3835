@@ -1,0 +1,28 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import {Provider} from 'react-redux';
+import store from './store'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Parent from './componentes/Parent';
+import Child from './componentes/Child';
+import Books from './componentes/Books';
+import BooksDetails from './componentes/BooksDetails';
+
+ReactDOM.render(<Provider store={store}>
+                    {/* <App /> */}
+                    <Router>
+                        <div>
+                            <Route path="/" exact component={Parent}/>
+                            <Route path="/books" exact component={Books}/>
+                            <Route path="/books/:id" component={BooksDetails}/>
+                        </div>
+                    </Router>
+                </Provider>, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();
